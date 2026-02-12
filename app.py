@@ -166,7 +166,7 @@ def do_print():
     date_line = datetime.now(ZoneInfo("Europe/Warsaw")).strftime("%d.%m.%Y %H:%M")
 
     # Wydruk: 1) BET/OUT 2) kwota 3) data
-    text_to_print = f"IgoCheap\nCasino printer\n\n{mode}\n{amount_pl} zł\n{date_line}\n\n"
+    text_to_print = f"IgoCheap\nCasino printer\n\n{mode}\n{amount_pl} zł\n{date_line}\nNo refunds.\n\n"
 
     intent_uri = RawBtIntents.print_text(text_to_print)
     return redirect(intent_uri, code=302)
